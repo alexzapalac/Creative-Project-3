@@ -1,10 +1,9 @@
 <template>
 <div>
   <div class="wrapper">
-    <div class="search">
-      <form class="pure-form">
-        <i class="fas fa-search"></i><input v-model="searchText" />
-      </form>
+    <div class="intro">
+      <h4>Welcome to Plant Haven! We hope to bring the beauty of nature to your home by offering the perfect complement to your home.</h4>
+      <h4>Just click on any of our images to learn more about each plant!</h4>
     </div>
   </div>
   <ProductList :plants="plants" />
@@ -36,6 +35,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.intro {
+  text-align: center;
+  line-height: 1.5em;
 }
 
 .search {

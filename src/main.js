@@ -6,9 +6,29 @@ import mock from './mock-data.js'
 Vue.config.productionTip = false
 let data = {
   plants: mock,
-  comments: {},
-  addedComment:'',
-  addedName: '',
+  cart: [],
+
+
+  item: [],
+  addToItem() {
+    this.item.push({
+      id: this.id,
+      name: this.name,
+      otherName: this.otherName,
+      family: this.family,
+      image: this.image
+    })
+  },
+
+  addToCart() {
+    this.cart.push({
+      id: this.id,
+      name: this.name,
+      otherName: this.otherName,
+      family: this.family,
+      image: this.image
+    });
+  }
 
 }
 

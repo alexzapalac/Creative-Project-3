@@ -4,7 +4,7 @@ let mock = [{
     otherName: "Lavandula ×intermedia Emeric ex Loisel.",
     family: "Lamiaceae",
     image: "azalea.jpg",
-    description: "The Calycanthus Ogeche is a rare, tiny plant and can be found only in some tropical regions. It blooms in late spring. It has thick, circular leaves, which are usually forest green. It also grows quite small flowers, which can be light orange, light yellow and light purple. These plants grow in huge numbers, but it's fairly easy to control and maintain their growth. They can be used as a cooking ingredient, similar to herbs. As a defense mechanism the Calycanthus Ogeche has a thick, wooden stem. They rely on cloning themselves by growing a new specimen to reproduce."
+
   }, {
     id: 2,
     name: "Eastern Bottlebrush Grass",

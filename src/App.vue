@@ -1,11 +1,14 @@
 <template>
 <div id="app">
   <div id="menu">
-    <div id="brand">
+    <div id="brand" v-on:click="clearItem()">
       <router-link to="/">
-        <img src="images/logo.png">
+        <img src="/images/logo.jpg">
       </router-link>
     </div>
+  </div>
+  <div id="brand-name">
+    <h1><b>Plant Haven</b></h1>
   </div>
   <router-view />
   <footer>
@@ -29,10 +32,13 @@ export default {
   computed: {
     showCartSize(){
       return this.$root.$data.cartSize;
-    }
+    },
+
   },
   methods: {
-
+    clearItem(){
+      this.$root.$data.item.splice(0);
+    }
   }
 }
 </script>
@@ -53,21 +59,35 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 5px;
   grid-template-areas: "none brand side";
-  margin-bottom: 50px;
+  margin-bottom: 0px;
+}
+
+h1 {
+  margin-bottom: 20px;
 }
 
 #menu a {
-  color: #B84901;
+  color: #a5f7f0;
 }
 
 #brand {
   grid-area: brand;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 #brand img {
   height: 200px;
+}
+
+#brand-name {
+  text-align: center;
+}
+
+.h1 {
+  padding-top: 0px;
+  padding-bottom: 10px;
 }
 
 #side {
@@ -97,5 +117,6 @@ body {
 .footer {
   margin-top: 30px;
   text-align: center;
+  margin-top: 25px;
 }
 </style>

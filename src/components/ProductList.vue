@@ -4,11 +4,11 @@
     <div class="product" v-for="plant in plants" :key="plant.id">
       <div class="info">
         <h1>{{plant.name}}</h1>
-        <p>{{plant.otherName}}</p>
-        <p>{{plant.family}}</p>
+
       </div>
-      <div class="image">
-        <router-link  :to="'/item/' + plant.id">
+      <div class="image" v-on:click="addToItem(plant)">
+        <router-link  :to="'/item/'">
+        
         <img :src="'/img/'+plant.image">
         </router-link>
       </div>
@@ -21,12 +21,14 @@
 export default {
   name: 'ProductList',
   props: {
-    plants: Array
+    plants: Array,
+    
   },
   methods: {
-      addToCart(product) {
-          this.$root.$data.cart.push(product);
+      addToItem(plant) {
+          this.$root.$data.item.push(plant);
       },
+
   }
 }
 </script>
@@ -65,7 +67,7 @@ export default {
 }
 
 .info {
-  background: #F2921D;
+  background: #f0baed;
   color: #000;
   padding: 10px 30px;
   height: 80px;
