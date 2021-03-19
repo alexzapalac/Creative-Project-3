@@ -13,7 +13,7 @@
   <router-view />
   <footer>
     <p>Author: Alex Zapalac</p>
-    <p><a href="https://github.com/BYU-CS-260-Winter-2021/lab-3b-grocery-store-alexzapalac">GitHub Repository</a></p>
+    <p><a href="https://github.com/alexzapalac/Creative-Project-3">GitHub Repository</a></p>
   </footer>  
 </div>
 </template>
