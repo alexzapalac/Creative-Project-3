@@ -1,11 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './registerServiceWorker'
-import store from './store'
+import router from './router'
+import mock from './mock-data.js'
 
 Vue.config.productionTip = false
+let data = {
+  plants: mock,
+  comments: {},
+  addedComment:'',
+  addedName: '',
+
+}
 
 new Vue({
-  store,
+  router,
+  data,
   render: h => h(App)
 }).$mount('#app')
